@@ -1,0 +1,39 @@
+/* pages/systeminfo/systeminfo.wxss */
+.systeminfo {
+  background-color: #fff;
+  /* padding:0 30rpx 0 30rpx; */
+}
+.brand {
+  height:300rpx;
+  font-size:100rpx;
+  color:#21b68e;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand image {
+  width:100rpx;
+  height:100rpx;
+  margin-right:20rpx;
+}
+
+.brand text {
+
+}
+
+.item{
+  padding:30rpx 30rpx;
+  font-size: 32rpx;
+  border-top: 1rpx solid #f4f6f9;
+}
+
+.item .key{
+}
+
+.item .value{
+  margin-left: 20rpx;
+  color: #999;
+  font-size: 28rpx;
+}

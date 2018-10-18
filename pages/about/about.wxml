@@ -1,0 +1,84 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+  <view class="about">
+    <!-- 其他小程序 -->
+    <view class="other">
+      <swiper indicator-dots="true" indicator-active-color="#21b68e" autoplay="true" interval="5000" duration="300" circular="true" style="height:{{swiperHeight}}">
+      <block wx:for="{{bannerImgList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class="info" catchtap='previewImages' data-index='{{index}}'>
+            <image src="{{item.src}}"></image>
+            <text class="name">{{item.title}}</text>
+          </view>
+        </swiper-item>
+      </block>
+      </swiper>
+    </view>
+
+    <view class="clear_10" style="background-color:#f4f6f9;"></view>
+
+    <!-- 联系 -->
+    <view class="contact item">
+      <view class="title">联系开发者</view>
+      <view class="i"  catchtap='copy' data-title='GitHub' data-content='{{github}}'>
+        <view class='icon'>
+          <image src='/images/github.png'></image>
+        </view>
+        <view class='text'>
+          <view>通过 GitHub 反馈</view>
+          <view>{{github}}</view>
+        </view>
+      </view>
+
+      <view class="i" catchtap='copy' data-title='邮箱' data-content='{{email}}'>
+        <view class='icon'>
+          <image src='/images/email.png'></image>
+        </view>
+        <view class='text'>
+          <view>通过 Email 反馈</view>
+          <view>{{email}}</view>
+        </view>
+      </view>
+
+      <view class="i" catchtap='copy' data-title='QQ' data-content='{{qq}}'>
+        <view class='icon'>
+          <image src='/images/qq.png'></image>
+        </view>
+        <view class='text'>
+          <view>通过 QQ 反馈</view>
+          <view>{{qq}}</view>
+        </view>
+      </view>
+
+      <view class="i">
+        <view class='icon'>
+          <image src='/images/wechat.png'></image>
+        </view>
+        <view class='text'>
+          <view>微信快速联系</view>
+          <button open-type="contact" class='btn'></button>
+        </view>
+      </view>
+    </view>
+
+    <view class="clear_10" style="background-color:#f4f6f9;"></view>
+
+    <!-- 鸣谢 -->
+    <view class='thanks item'>
+      <view class='title'>鸣谢</view>
+      <view class='i'>
+        <view class='icon'>
+          <image src='/images/location_grey.png'></image>
+        </view>
+        <view class='text'>地理编码：百度地图开放平台</view>
+      </view>
+      <view class='i'>
+        <view class='icon'>
+          <image src='/images/weather.png'></image>
+        </view>
+        <view class='text'>天气数据来源：百度地图开放平台</view>
+      </view>
+    </view>
+
+  </view>
+</view>

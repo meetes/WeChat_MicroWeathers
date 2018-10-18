@@ -1,0 +1,19 @@
+<!--pages/systeminfo/systeminfo.wxml-->
+<view class="container">
+  <view class="systeminfo">
+    <!-- 大品牌 -->
+    <view class="brand">
+      <image src="/images/mobile.png"></image>
+      <text>{{systeminfoObj.brand}}</text>
+    </view>
+
+    <view class="clear_10" style="background-color:#f4f6f9;"></view>
+
+    <!-- 详细信息 -->
+    <view class="item" wx:for="{{systeminfoArr}}" wx:key="{{index}}">
+      <text class="key">{{item.name}}</text>
+      <text class="value">{{systeminfoObj[item.key]}}</text>
+    </view>
+
+  </view>
+</view>
